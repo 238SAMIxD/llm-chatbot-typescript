@@ -1,10 +1,12 @@
-import { config } from "dotenv";
-import { BaseChatModel } from "langchain/chat_models/base";
-import { RunnableSequence } from "@langchain/core/runnables";
-import { ChatOpenAI } from "@langchain/openai";
-import { PromptTemplate } from "@langchain/core/prompts";
-import { StringOutputParser } from "@langchain/core/output_parsers";
-import initGenerateAuthoritativeAnswerChain from "./authoritative-answer-generation.chain";
+import { config } from 'dotenv';
+import { BaseChatModel } from 'langchain/chat_models/base';
+
+import { StringOutputParser } from '@langchain/core/output_parsers';
+import { PromptTemplate } from '@langchain/core/prompts';
+import { RunnableSequence } from '@langchain/core/runnables';
+import { ChatOpenAI } from '@langchain/openai';
+
+import initGenerateAuthoritativeAnswerChain from './authoritative-answer-generation.chain';
 
 describe("Authoritative Answer Generation Chain", () => {
   let llm: BaseChatModel;
